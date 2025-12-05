@@ -1,13 +1,17 @@
 import { useState } from 'react'
-import './App.css'
+import './App.css';
+import {Routes, Route} from 'react-router-dom';
+import Login from './components/Login.jsx';
+import Signup from './components/Signup.jsx';
+import AuthCard from './components/AuthCard.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-     <h1 className='text-3xl font-bold underline'>My Auth UI</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/authcard" element={<AuthCard />} />
+    </Routes>
   )
 }
 
